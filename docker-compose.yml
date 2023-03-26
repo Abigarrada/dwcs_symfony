@@ -7,7 +7,7 @@ services:
     args:
      ENVPATH: symfony.build
   environment:
-  - SYMFONYV=^5.4
+  - SYMFONYV=^6.0
   - PROJNAME=symfony_projects
   hostname: symfony
   ports:
