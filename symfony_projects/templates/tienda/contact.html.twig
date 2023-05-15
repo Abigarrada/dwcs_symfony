@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+
+		<h1 class="display-1 text-center">{{title}}</h1>
+
+	</div>
+	<div class="container">
+		<br>
+		<p class="display-4 text-center">{{legend}}</p>
+
+
+		<br>
+
+
+		<div class="row">
+
+			<div class="col-6 text-center">
+				<h2>Ven a visitarnos:</h2>
+				<h3>Rúa Freixo, 48, baixo</h3>
+				<h3>36204, Vigo</h3>
+			</div>
+
+			<div class="col-6 text-center">
+				<img src="{{contact_img}}" weight="200px" height="200px">
+
+			</div>
+
+		</div>
+
+
+		<br><br>
+
+		<div class="text-center">
+
+
+			<a class="btn btn-success" href="/list" role="button">
+
+				Ver produtos</a>
+			<a class="btn btn-success" href="/" role="button">
+
+				Volver ao inicio</a>
+		</div>
+
+	</div>
+
+
+{% endblock %}

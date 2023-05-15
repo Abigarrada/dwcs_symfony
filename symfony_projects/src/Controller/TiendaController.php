@@ -15,26 +15,42 @@ class TiendaController extends AbstractController
     {
 
         //return new Response("Probando Symfony por primeira vez");
-        $productos = [
-            ['descripcion' =>  'Anillo - Cruz oro',  'precio' => 100, 'foto' => 'images/anillo.jpg'],
-            ['descripcion' =>  'Pulsera - Rayo plata',  'precio' => 10, 'foto' => 'images/pulsera.jpg'],
-            ['descripcion' =>  'Colgante - Oso plata',  'precio' => 300, 'foto' => 'images/colgante.jpg'],
-        ];
+
 
         return $this->render('tienda/homepage.html.twig', [
-            'titulo' => 'Patatillas',
-            'productos' => $productos,
+            'title' => 'Les fleurs du café',
+            'legend' => '¡Benvidos á primeira florestería-cafetaría de Vigo!',
+            'home_img' => 'images/home_flowers.jpg'
 
         ]);
     }
 
-    #[Route('/list/{slug}', name: 'app_list')]
-    public function list(string $slug = null)
+    #[Route('/list', name: 'app_list')]
+    public function list()
     {
-        if ($slug) {
-            return new Response('Futura lista de ' . $slug);
-        } else {
-            return new Response('Futura lista');
-        }
+
+        $products = [
+            ['description' =>  'Café só',  'price' => '1€', 'img' => 'images/cafe_so.jpg'],
+            ['description' =>  'Café con leite',  'price' => '1.2€', 'img' => 'images/cafe_leite.jpg'],
+            ['description' =>  'Rosa (ud.)',  'price' => '2.5€', 'img' => 'images/rosa.jpg'],
+            ['description' =>  'Centro de flores',  'price' => '7€', 'img' => 'images/centro_flores.jpg'],
+            ['description' =>  'Ramo',  'price' => '10€', 'img' => 'images/ramo.jpg'],
+        ];
+
+        return $this->render('tienda/list.html.twig', [
+            'title' => 'Les fleurs du café',
+            'products' => $products,
+
+        ]);
+    }
+
+    #[Route('/contact', name: 'app_contact')]
+    public function contact()
+    {
+        return $this->render('tienda/contact.html.twig', [
+            'title' => 'Les fleurs du café',
+            'legend' => '¡Benvidos á primeira florestería-cafetaría de Vigo!',
+            'contact_img' => 'images/contact_flowers.jpg'
+        ]);
     }
 }

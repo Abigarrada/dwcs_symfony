@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+
+		<h1 class="display-1 text-center">{{title}}</h1>
+
+	</div>
+
+
+	<div class="jumbotron-img jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">Lista de produtos</h1>
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="col-12 col-md-8 ps-5">
+			<h2 class="mb-4">Produtos</h2>
+			{% for product in products %}
+				<div class="song-list">
+					<div class="d-flex mb-3">
+						<div class="col-2 text-center">
+							<img src="{{ product.img }}" width="100" height="100">
+
+						</div>
+						<span class="song-details">{{ product.description }}
+							-
+							{{ product.price }}</span>
+						<a href="#">
+							<i class="fas fa-bars mx-3"></i>
+						</a>
+						<a href="#">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+			<div class="text-center">
+
+				<button type="button" class="btn btn-success">
+					<i class="fas fa-plus"></i>
+					Engade un producto</button>
+
+				<button class="btn btn-success">Comentarios</button>
+
+				<a class="btn btn-success" href="/" role="button">
+
+					Volver ao inicio</a>
+				<a class="btn btn-success" href="/contact" role="button">
+
+					Contacto</a>
+			</div>
+
+		</div>
+	</div>
+</div>{% endblock %}
