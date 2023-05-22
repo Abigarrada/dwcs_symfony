@@ -1,0 +1,27 @@
+[
+    {
+        "description": "Café só",
+        "price": "1€",
+        "img": "images/cafe_so.jpg"
+    },
+    {
+        "description": "Café con leite",
+        "price": "1.2€",
+        "img": "images/cafe_leite.jpg"
+    },
+    {
+        "description": "Rosa (ud.)",
+        "price": "2.5€",
+        "img": "images/rosa.jpg"
+    },
+    {
+        "description": "Centro de flores",
+        "price": "7€",
+        "img": "images/centro_flores.jpg"
+    },
+    {
+        "description": "Ramo",
+        "price": "10€",
+        "img": "images/ramo.jpg"
+    }
+]
